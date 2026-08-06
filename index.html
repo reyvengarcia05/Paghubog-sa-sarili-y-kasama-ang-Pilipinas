@@ -3,127 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Community, My Identity | Reyven Bermudo</title>
+<title>From Silence to Significance - Reyven Bermudo</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#0038A8;--red:#CE1126;--gold:#FCD116}
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:#071426;color:#fff;overflow-x:hidden}
-#intro{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--blue),#0a1f44,var(--red));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-#intro h1{font-size:clamp(2rem,6vw,5rem)}
-#intro p{margin:20px;max-width:700px}
-.btn{padding:14px 28px;border:none;border-radius:999px;background:var(--gold);font-weight:700;cursor:pointer}
-.hidden{display:none}
-.sun,.star{position:fixed;pointer-events:none;opacity:.2}
-.sun{right:3%;top:10%;font-size:80px;animation:spin 30s linear infinite}
-.star{font-size:35px;animation:float 6s ease-in-out infinite}
-.s1{left:5%;top:20%}.s2{left:15%;top:70%}.s3{right:15%;top:55%}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{50%{transform:translateY(-20px)}}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),linear-gradient(180deg,var(--blue),#071426)}
-.hero h1{font-size:clamp(2.8rem,8vw,6rem)}
-.hero p{max-width:850px;margin:20px auto}
-section{padding:90px 10%}
-.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{padding:25px;background:#ffffff10;border-radius:18px}
-.title{text-align:center;font-size:2.5rem;margin-bottom:40px}
-.map{font-size:7rem;text-align:center}
-.timeline{border-left:4px solid var(--gold);margin:auto;max-width:800px}
-.event{margin:30px 0 30px 30px;padding:20px;background:#ffffff10;border-radius:15px}
-.quote{font-size:clamp(1.4rem,3vw,2.2rem);text-align:center;font-weight:700}
-.reveal{opacity:0;transform:translateY(60px);transition:1s}
-.reveal.show{opacity:1;transform:none}
-footer{text-align:center;padding:40px;background:#00000033}
+body{background:#0b0b0b;color:#fff}
+.hero,.section,.final{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 8%}
+.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75));text-align:center}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem)}
+.hero p{max-width:800px;margin:20px auto;color:#ddd}
+.btn{display:inline-block;background:#b30000;color:#fff;padding:14px 30px;border-radius:40px;text-decoration:none}
+.card{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:40px;background:rgba(255,255,255,.05);padding:30px;border-radius:20px}
+.card img{width:100%;border-radius:16px}
+.evidence{color:#ff5a5a;font-weight:700}
+h2{font-size:2.3rem;margin:10px 0}
+ul{padding-left:20px;line-height:2}
+.quote{margin-top:20px;font-style:italic;color:#ddd}
+.final{text-align:center;background:linear-gradient(#000,#180000)}
+@media(max-width:900px){.card{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<div id="intro">
-<h1>🇵🇭 My Community, My Identity</h1>
-<p id="type"></p>
-<button class="btn" onclick="startJourney()">Begin the Journey</button>
-</div>
-
-<div class="sun">☀️</div>
-<div class="star s1">⭐</div>
-<div class="star s2">⭐</div>
-<div class="star s3">⭐</div>
-
 <section class="hero">
 <div>
-<h1>Kabataang Humuhubog sa Bayan</h1>
-<p>Welcome to a digital exhibit about how community, culture, and Filipino values shape identity. This project represents the journey of Reyven Bermudo as a Filipino youth inspired by service, education, and hope.</p>
+<h1>FROM SILENCE TO SIGNIFICANCE</h1>
+<p>How My Community Shaped My Identity</p>
+<p><strong>Reyven Bermudo</strong></p>
+<a href="#c1" class="btn">Begin the Story</a>
 </div>
 </section>
 
-<section class="reveal">
-<h2 class="title">The Philippines: My Community</h2>
-<div class="glass">
-<div class="map">🇵🇭</div>
-<p>The Philippines is more than a country. It is my community, my culture, my history, and my home. Through its traditions, stories, and people, I learned what it means to belong and to contribute.</p>
+<section class="section" id="c1">
+<div class="card">
+<div><img src="honor.jpg" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 01</div>
+<h2>Who I Was</h2>
+<ul>
+<li>Ordinary student</li>
+<li>Quiet and reserved</li>
+<li>Afraid to leave my comfort zone</li>
+<li>Unsure of my potential</li>
+</ul>
+<p class="quote">"Before leadership found me, I was simply another student trying to fit in."</p>
+</div>
 </div>
 </section>
 
-<section class="reveal">
-<h2 class="title">Filipino Values I Carry</h2>
-<div class="grid">
-<div class="card"><h3>🤝 Bayanihan</h3><p>Working together for the common good.</p></div>
-<div class="card"><h3>❤️ Compassion</h3><p>Caring for others with empathy and kindness.</p></div>
-<div class="card"><h3>💪 Resilience</h3><p>Standing strong despite challenges.</p></div>
-<div class="card"><h3>📚 Education</h3><p>Using knowledge to create change.</p></div>
+<section class="section">
+<div class="card">
+<div><img src="sslg-logo.png" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 02</div>
+<h2>The Opportunity</h2>
+<ul>
+<li>Joined SSLG in Grade 9</li>
+<li>Accepted the challenge</li>
+<li>Took my first step into leadership</li>
+</ul>
+<p class="quote">"One decision changed everything—I chose to step forward despite my fears."</p>
+</div>
 </div>
 </section>
 
-<section class="reveal">
-<h2 class="title">My Identity</h2>
-<div class="glass">
-<p>As a Filipino youth, my identity is shaped by my family, school, community, and nation. Every lesson, challenge, and opportunity helped me grow into a responsible citizen who dreams of helping build a better future.</p>
+<section class="section">
+<div class="card">
+<div><img src="sslg-family.jpg" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 03</div>
+<h2>Finding My Place</h2>
+<ul>
+<li>Built friendships</li>
+<li>Learned teamwork</li>
+<li>Found a community</li>
+<li>Discovered my voice</li>
+</ul>
+<p class="quote">"The community gave me a place where my voice mattered."</p>
+</div>
 </div>
 </section>
 
-<section class="reveal">
-<h2 class="title">My Journey</h2>
-<div class="timeline">
-<div class="event"><h3>Childhood</h3><p>Learning respect, kindness, and family values.</p></div>
-<div class="event"><h3>Student Life</h3><p>Developing knowledge, discipline, and leadership.</p></div>
-<div class="event"><h3>Community Service</h3><p>Understanding the importance of helping others.</p></div>
-<div class="event"><h3>Future Goals</h3><p>Using education and skills to serve the nation.</p></div>
+<section class="section">
+<div class="card">
+<div><img src="activity.jpg" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 04</div>
+<h2>Experiences Beyond the Classroom</h2>
+<ul>
+<li>Participated in school activities</li>
+<li>Represented fellow students</li>
+<li>Expanded my experiences</li>
+</ul>
+<p class="quote">"Every activity became another piece of my story."</p>
+</div>
 </div>
 </section>
 
-<section class="reveal">
-<div class="quote">
-“The future of the Philippines is shaped by the actions of today's youth.”
+<section class="section">
+<div class="card">
+<div><img src="service1.jpg" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 05</div>
+<h2>Leadership Through Service</h2>
+<ul>
+<li>Helped children and community members</li>
+<li>Participated in outreach programs</li>
+<li>Led through action</li>
+</ul>
+<p class="quote">"Leadership is not about titles. It is about service."</p>
+</div>
 </div>
 </section>
 
-<section class="reveal">
-<h2 class="title">Message to My Community</h2>
-<div class="glass">
-<p>My identity is rooted in the people, values, and culture of the Philippines. Through education, service, and leadership, I hope to contribute to a brighter future for my community and my nation. This journey reminds me that who I am today is deeply connected to the community that helped shape me.</p>
+<section class="section">
+<div class="card">
+<div><img src="recognition.jpg" alt=""></div>
+<div>
+<div class="evidence">CHAPTER 06</div>
+<h2>Confidence and Achievement</h2>
+<ul>
+<li>Built confidence</li>
+<li>Improved communication skills</li>
+<li>Strengthened discipline</li>
+<li>Achieved With Honors</li>
+</ul>
+<p class="quote">"The person I am today is different from the person I was before."</p>
+</div>
 </div>
 </section>
 
-<footer>
-<h3>My Community • My Identity • My Future</h3>
-<p>Created by Reyven Bermudo</p>
-</footer>
+<section class="final">
+<div>
+<h1>A STUDENT LEADER SHAPED BY COMMUNITY</h1>
+<p style="max-width:900px;margin:20px auto;">
+I joined SSLG to serve my community, but in the process, my community helped build my identity, strengthen my confidence, and inspire me to become a better version of myself.
+</p>
+<h3>Reyven Bermudo</h3>
+</div>
+</section>
 
-<script>
-const msg="Ready to discover how my community shaped my identity?";
-let i=0; const t=document.getElementById('type');
-(function type(){ if(i<msg.length){t.textContent+=msg[i++]; setTimeout(type,45);} })();
-
-function startJourney(){
- document.getElementById('intro').classList.add('hidden');
-}
-
-const obs=new IntersectionObserver(entries=>{
- entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
 </body>
 </html>
