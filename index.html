@@ -9,18 +9,17 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 html{scroll-behavior:smooth}
 body{background:#0b0b0b;color:#fff}
-.hero,.section,.final{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 8%}
 .hero{
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url("honor.jpg");
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+linear-gradient(
+135deg,
+#050505,
+#111111,
+#1a1a1a,
+#2b0000
+);
 text-align:center;
 }
-.hero h1{font-size:clamp(2.5rem,6vw,5rem)}
-.hero p{max-width:800px;margin:20px auto;color:#ddd}
 .btn{display:inline-block;background:#b30000;color:#fff;padding:14px 30px;border-radius:40px;text-decoration:none}
 .card{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:40px;background:rgba(255,255,255,.05);padding:30px;border-radius:20px}
 .card img{width:100%;border-radius:16px}
@@ -32,8 +31,8 @@ ul{padding-left:20px;line-height:2}
 @media(max-width:900px){.card{grid-template-columns:1fr}}
 .fade-up{
 opacity:0;
-transform:translateY(60px);
-transition:all 1s ease;
+transform:translateY(80px);
+transition:all 1.2s cubic-bezier(.17,.67,.31,1);
 }
 
 .fade-up.show{
@@ -47,15 +46,16 @@ transform:scale(.8);
 transition:1s;
 }
 
-.zoom.show{
-opacity:1;
-transform:scale(1);
+.zoom{
+opacity:0;
+transform:scale(.85);
+transition:all 1.2s cubic-bezier(.17,.67,.31,1);
 }
 
-  .slide-left{
+.slide-left{
 opacity:0;
-transform:translateX(-100px);
-transition:1s;
+transform:translateX(-120px);
+transition:all 1.2s cubic-bezier(.17,.67,.31,1);
 }
 
 .slide-left.show{
@@ -133,7 +133,15 @@ max-height:3000px;
 
 <div class="drawer-content">
 
-<p>
+</p>
+
+</div>
+
+</div>
+</div>
+
+</section>
+  
 
 My high school journey began in Grade 7. Yes, I know it was 2021—the height of the pandemic.
 
@@ -175,8 +183,24 @@ From that moment on, a question kept coming to my mind:
 <li>Accepted the challenge</li>
 <li>Took my first step into leadership</li>
 </ul>
-<p class="quote">"One decision changed everything—I chose to step forward despite my fears."</p>
-</div>
+<p class="quote">
+"One decision changed everything—I chose to step forward despite my fears."
+</p>
+
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+<p>
+
+To make a long story short, I decided to run for a position, and fortunately, I had no opponent. I was elected and became partners in leadership with Vanessa Jotic. That marked the beginning of our leadership journey together.
+
+During my first year in the SSLG, I was still unsure of myself. I often questioned whether I was truly capable of fulfilling my responsibilities. There were moments when the work became stressful and challenging, but there were also many enjoyable experiences along the way. What made the journey easier was the people I worked with. My fellow SSLG members were friendly, supportive, and easy to bond with.
+
+As time passed, I realized that leadership was not only about responsibilities and challenges—it was also about teamwork, friendship, and growing together as a community.
+
+</p>
 </div>
 </section>
 
@@ -193,7 +217,21 @@ From that moment on, a question kept coming to my mind:
 <li>Discovered my voice</li>
 </ul>
 <p class="quote">"The community gave me a place where my voice mattered."</p>
-</div>
+  
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+<p>
+  
+By the time I reached Grades 9 and 10, my confidence had grown significantly. I was no longer afraid to participate in class, and I actively practiced my public speaking skills whenever I had the opportunity. It felt as if my personality had completely changed. The community I became part of—the SSLG—helped me become a more confident and capable version of myself.
+
+This chapter of my life is one of the things I am most grateful for. Through SSLG, I discovered strengths that I never knew I had. However, there came a time when I began to ask myself, “What if I aimed for a higher position in SSLG?” I knew it would be difficult, but I wanted to challenge myself and find out where my true strengths lay.
+
+As I explored different responsibilities, I found myself drawn to the world of editing and encoding. I worked hard to learn these skills, spending time and effort improving little by little each day. It was not easy, but through dedication and perseverance, I eventually mastered them. More importantly, I discovered a passion that would become a major part of my leadership journey.
+
+</p>
 </div>
 </section>
 
@@ -209,7 +247,20 @@ From that moment on, a question kept coming to my mind:
 <li>Expanded my experiences</li>
 </ul>
 <p class="quote">"Every activity became another piece of my story."</p>
-</div>
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+<p>
+
+Through my journey in the SSLG, I learned so much that the lessons and experiences I gained have become a guide for me whenever I face challenges. Looking back, I once had people who inspired me to become a leader. Now, I am grateful that I have become an inspiration to others as well.
+
+There is a special feeling whenever students tell me things like, “I want to join SSLG because I see how you work together,” “Your edits and projects are amazing,” or “I want to join the Multimedia Team if you will teach me.” Hearing those words is incredibly rewarding because they remind me that the work we do as student leaders has a positive impact on others.
+
+What makes it even more meaningful is knowing that people appreciate the efforts of the SSLG organization that I am proud to be part of. Through this community, I have been given opportunities to represent our school and serve my fellow students. More than the skills I developed, SSLG taught me the value of leadership, service, and inspiring others to become the best version of themselves.
+
+</p>
 </div>
 </section>
 
@@ -225,7 +276,24 @@ From that moment on, a question kept coming to my mind:
 <li>Led through action</li>
 </ul>
 <p class="quote">"Leadership is not about titles. It is about service."</p>
-</div>
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+<p>
+
+One of the most meaningful lessons I learned through SSLG is that leadership is not measured by a position or a title. True leadership is shown through service and the willingness to help others.
+
+Throughout my journey, I had the opportunity to participate in various school and community activities, including outreach programs that aimed to support children and community members in need. These experiences allowed me to see the impact that even small acts of kindness and service can have on people's lives.
+
+Being involved in these activities taught me the importance of empathy, responsibility, and teamwork. I learned that a leader does not simply give instructions but leads by example. Whether it was helping organize events, supporting community projects, or working alongside fellow volunteers, every experience reminded me that leadership is about making a positive difference in the lives of others.
+
+Through service, I discovered that the greatest reward of leadership is not recognition—it is knowing that you have helped someone and contributed to your community.
+
+"Leadership is not about titles. It is about service."
+  
+</p>
 </div>
 </section>
 
@@ -242,7 +310,26 @@ From that moment on, a question kept coming to my mind:
 <li>Achieved With Honors</li>
 </ul>
 <p class="quote">"The person I am today is different from the person I was before."</p>
-</div>
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+<p>
+
+  As I look back on my journey, I realize how much I have grown since the shy and uncertain student I once was. The SSLG community helped me build confidence, develop my voice, and believe in my abilities.
+
+Through countless experiences, I improved my communication skills and became more comfortable speaking in front of different audiences. I learned how to express my ideas clearly, work with others effectively, and take responsibility for my actions. Along the way, I also developed discipline, time management, and perseverance—qualities that continue to guide me in both academics and leadership.
+
+The lessons I gained from SSLG did not only help me become a better leader; they also helped me become a better student. My hard work and determination eventually led me to achieve academic success, including earning recognition as a With Honors student.
+
+Today, I understand that confidence is not something a person is born with—it is something that grows through experience, challenges, and continuous learning. The journey was not always easy, but every step helped shape the person I am today.
+
+The SSLG did more than give me leadership opportunities. It gave me a community that believed in me, challenged me to grow, and helped me discover my true identity.
+
+From Silence to Significance—this is the story of how my community shaped who I am today.
+
+</p>
 </div>
 </section>
 
@@ -256,14 +343,18 @@ I joined SSLG to serve my community, but in the process, my community helped bui
 </div>
 </section>
 
-  <script>
+ <script>
+
+<script>
 
 const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
 
 if(entry.isIntersecting){
-entry.target.classList.add("show");
+    entry.target.classList.add("show");
+}else{
+    entry.target.classList.remove("show");
 }
 
 });
@@ -279,7 +370,6 @@ observer.observe(el);
 });
 
 </script>
-
   <script>
 
 document.querySelectorAll('.drawer-btn').forEach(button=>{
