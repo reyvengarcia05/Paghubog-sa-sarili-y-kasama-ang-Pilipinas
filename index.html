@@ -10,7 +10,15 @@
 html{scroll-behavior:smooth}
 body{background:#0b0b0b;color:#fff}
 .hero,.section,.final{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 8%}
-.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75));text-align:center}
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("honor.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+text-align:center;
+}
 .hero h1{font-size:clamp(2.5rem,6vw,5rem)}
 .hero p{max-width:800px;margin:20px auto;color:#ddd}
 .btn{display:inline-block;background:#b30000;color:#fff;padding:14px 30px;border-radius:40px;text-decoration:none}
@@ -54,6 +62,44 @@ transition:1s;
 opacity:1;
 transform:translateX(0);
 }
+
+  .drawer-btn{
+margin-top:20px;
+width:100%;
+padding:15px;
+background:#b30000;
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.drawer-btn:hover{
+background:#d10000;
+transform:translateY(-2px);
+}
+
+.drawer-content{
+max-height:0;
+overflow:hidden;
+transition:max-height .8s ease;
+background:rgba(255,255,255,.04);
+border-radius:12px;
+margin-top:10px;
+}
+
+.drawer-content p{
+padding:20px;
+line-height:1.9;
+color:#ddd;
+}
+
+.drawer-content.active{
+max-height:3000px;
+}
   
 </style>
 </head>
@@ -69,7 +115,7 @@ transform:translateX(0);
 </section>
 
 <section class="section" id="c1">
-<div class="card">
+<div class="card fade-up">
 <div><img src="honor.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 01</div>
@@ -81,12 +127,45 @@ transform:translateX(0);
 <li>Unsure of my potential</li>
 </ul>
 <p class="quote">"Before leadership found me, I was simply another student trying to fit in."</p>
-</div>
+<button class="drawer-btn">
+📂 Read Full Story
+</button>
+
+<div class="drawer-content">
+
+<p>
+
+My high school journey began in Grade 7. Yes, I know it was 2021—the height of the pandemic.
+
+Despite the challenges, I was fortunate enough to be among the students who were allowed to attend limited face-to-face classes.
+
+Back then, you might think I was a typical student who confidently raised my hand, spoke well in front of others, and knew how to handle problems.
+
+But the truth is, I was the exact opposite.
+
+I was afraid of speaking in public, lacked confidence, and was uncomfortable stepping outside my comfort zone.
+
+Everything started to change in Grade 8.
+
+I often saw the student leaders in our school working with confidence and determination.
+
+One person stood out to me the most—a fellow Grade 8 student named Vanessa Jotic.
+
+Seeing someone my age take on leadership roles made me realize that leadership was not only for older students.
+
+That day, she became my inspiration.
+
+From that moment on, a question kept coming to my mind:
+
+"Why not give it a try?"
+
+</p>
+
 </div>
 </section>
 
 <section class="section">
-<div class="card">
+<div class="card fade-up">
 <div><img src="sslg-logo.png" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 02</div>
@@ -102,7 +181,7 @@ transform:translateX(0);
 </section>
 
 <section class="section">
-<div class="card">
+<div class="card fade-up">
 <div><img src="sslg-family.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 03</div>
@@ -119,7 +198,7 @@ transform:translateX(0);
 </section>
 
 <section class="section">
-<div class="card">
+<div class="card fade-up">
 <div><img src="activity.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 04</div>
@@ -135,7 +214,7 @@ transform:translateX(0);
 </section>
 
 <section class="section">
-<div class="card">
+<div class="card fade-up">
 <div><img src="service1.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 05</div>
@@ -151,7 +230,7 @@ transform:translateX(0);
 </section>
 
 <section class="section">
-<div class="card">
+<div class="card fade-up">
 <div><img src="recognition.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 06</div>
@@ -196,6 +275,28 @@ document.querySelectorAll(
 ).forEach(el=>{
 
 observer.observe(el);
+
+});
+
+</script>
+
+  <script>
+
+document.querySelectorAll('.drawer-btn').forEach(button=>{
+
+button.addEventListener('click',()=>{
+
+const content = button.nextElementSibling;
+
+content.classList.toggle('active');
+
+if(content.classList.contains('active')){
+button.innerHTML='📂 Hide Story';
+}else{
+button.innerHTML='📂 Read Full Story';
+}
+
+});
 
 });
 
