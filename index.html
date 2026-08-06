@@ -125,6 +125,10 @@ max-width:800px;
 margin:20px auto;
 color:#ddd;
 }
+
+  .hero{
+background:red !important;
+}
   
 </style>
 </head>
@@ -187,7 +191,8 @@ From that moment on, a question kept coming to my mind:
 "Why not give it a try?"
 
 </p>
-
+</div>
+</div>
 </div>
 </section>
 
@@ -221,6 +226,9 @@ As time passed, I realized that leadership was not only about responsibilities a
 
 </p>
 </div>
+</div>
+</div>
+
 </section>
 
 <section class="section">
@@ -252,6 +260,8 @@ As I explored different responsibilities, I found myself drawn to the world of e
 
 </p>
 </div>
+  </div>
+  </div>
 </section>
 
 <section class="section">
@@ -281,6 +291,8 @@ What makes it even more meaningful is knowing that people appreciate the efforts
 
 </p>
 </div>
+  </div>
+  </div>
 </section>
 
 <section class="section">
@@ -314,6 +326,8 @@ Through service, I discovered that the greatest reward of leadership is not reco
   
 </p>
 </div>
+  </div>
+  </div>
 </section>
 
 <section class="section">
@@ -350,6 +364,8 @@ From Silence to Significance—this is the story of how my community shaped who 
 
 </p>
 </div>
+  </div>
+  </div>
 </section>
 
 <section class="final">
@@ -364,28 +380,20 @@ I joined SSLG to serve my community, but in the process, my community helped bui
 
 <script>
 const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }else{
+            entry.target.classList.remove("show");
+        }
+    });
+},{threshold:0.2});
 
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-    entry.target.classList.add("show");
-}else{
-    entry.target.classList.remove("show");
-}
-
+document.querySelectorAll('.fade-up,.zoom,.slide-left').forEach(el=>{
+    observer.observe(el);
 });
-
-},{threshold:.2});
-
-document.querySelectorAll(
-".fade-up,.zoom,.slide-left"
-).forEach(el=>{
-
-observer.observe(el);
-
-});
-
 </script>
+  
   <script>
 
 document.querySelectorAll('.drawer-btn').forEach(button=>{
