@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Community, My Identity | Reyven Bermudo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0038A8;--red:#CE1126;--gold:#FCD116}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:#071426;color:#fff;overflow-x:hidden}
+#intro{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--blue),#0a1f44,var(--red));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+#intro h1{font-size:clamp(2rem,6vw,5rem)}
+#intro p{margin:20px;max-width:700px}
+.btn{padding:14px 28px;border:none;border-radius:999px;background:var(--gold);font-weight:700;cursor:pointer}
+.hidden{display:none}
+.sun,.star{position:fixed;pointer-events:none;opacity:.2}
+.sun{right:3%;top:10%;font-size:80px;animation:spin 30s linear infinite}
+.star{font-size:35px;animation:float 6s ease-in-out infinite}
+.s1{left:5%;top:20%}.s2{left:15%;top:70%}.s3{right:15%;top:55%}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-20px)}}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),linear-gradient(180deg,var(--blue),#071426)}
+.hero h1{font-size:clamp(2.8rem,8vw,6rem)}
+.hero p{max-width:850px;margin:20px auto}
+section{padding:90px 10%}
+.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:25px;background:#ffffff10;border-radius:18px}
+.title{text-align:center;font-size:2.5rem;margin-bottom:40px}
+.map{font-size:7rem;text-align:center}
+.timeline{border-left:4px solid var(--gold);margin:auto;max-width:800px}
+.event{margin:30px 0 30px 30px;padding:20px;background:#ffffff10;border-radius:15px}
+.quote{font-size:clamp(1.4rem,3vw,2.2rem);text-align:center;font-weight:700}
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+footer{text-align:center;padding:40px;background:#00000033}
+</style>
+</head>
+<body>
+
+<div id="intro">
+<h1>🇵🇭 My Community, My Identity</h1>
+<p id="type"></p>
+<button class="btn" onclick="startJourney()">Begin the Journey</button>
+</div>
+
+<div class="sun">☀️</div>
+<div class="star s1">⭐</div>
+<div class="star s2">⭐</div>
+<div class="star s3">⭐</div>
+
+<section class="hero">
+<div>
+<h1>Kabataang Humuhubog sa Bayan</h1>
+<p>Welcome to a digital exhibit about how community, culture, and Filipino values shape identity. This project represents the journey of Reyven Bermudo as a Filipino youth inspired by service, education, and hope.</p>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">The Philippines: My Community</h2>
+<div class="glass">
+<div class="map">🇵🇭</div>
+<p>The Philippines is more than a country. It is my community, my culture, my history, and my home. Through its traditions, stories, and people, I learned what it means to belong and to contribute.</p>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">Filipino Values I Carry</h2>
+<div class="grid">
+<div class="card"><h3>🤝 Bayanihan</h3><p>Working together for the common good.</p></div>
+<div class="card"><h3>❤️ Compassion</h3><p>Caring for others with empathy and kindness.</p></div>
+<div class="card"><h3>💪 Resilience</h3><p>Standing strong despite challenges.</p></div>
+<div class="card"><h3>📚 Education</h3><p>Using knowledge to create change.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">My Identity</h2>
+<div class="glass">
+<p>As a Filipino youth, my identity is shaped by my family, school, community, and nation. Every lesson, challenge, and opportunity helped me grow into a responsible citizen who dreams of helping build a better future.</p>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">My Journey</h2>
+<div class="timeline">
+<div class="event"><h3>Childhood</h3><p>Learning respect, kindness, and family values.</p></div>
+<div class="event"><h3>Student Life</h3><p>Developing knowledge, discipline, and leadership.</p></div>
+<div class="event"><h3>Community Service</h3><p>Understanding the importance of helping others.</p></div>
+<div class="event"><h3>Future Goals</h3><p>Using education and skills to serve the nation.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="quote">
+“The future of the Philippines is shaped by the actions of today's youth.”
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="title">Message to My Community</h2>
+<div class="glass">
+<p>My identity is rooted in the people, values, and culture of the Philippines. Through education, service, and leadership, I hope to contribute to a brighter future for my community and my nation. This journey reminds me that who I am today is deeply connected to the community that helped shape me.</p>
+</div>
+</section>
+
+<footer>
+<h3>My Community • My Identity • My Future</h3>
+<p>Created by Reyven Bermudo</p>
+</footer>
+
+<script>
+const msg="Ready to discover how my community shaped my identity?";
+let i=0; const t=document.getElementById('type');
+(function type(){ if(i<msg.length){t.textContent+=msg[i++]; setTimeout(type,45);} })();
+
+function startJourney(){
+ document.getElementById('intro').classList.add('hidden');
+}
+
+const obs=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
