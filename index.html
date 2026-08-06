@@ -22,6 +22,39 @@ ul{padding-left:20px;line-height:2}
 .quote{margin-top:20px;font-style:italic;color:#ddd}
 .final{text-align:center;background:linear-gradient(#000,#180000)}
 @media(max-width:900px){.card{grid-template-columns:1fr}}
+.fade-up{
+opacity:0;
+transform:translateY(60px);
+transition:all 1s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+  .zoom{
+opacity:0;
+transform:scale(.8);
+transition:1s;
+}
+
+.zoom.show{
+opacity:1;
+transform:scale(1);
+}
+
+  .slide-left{
+opacity:0;
+transform:translateX(-100px);
+transition:1s;
+}
+
+.slide-left.show{
+opacity:1;
+transform:translateX(0);
+}
+  
 </style>
 </head>
 <body>
@@ -144,5 +177,29 @@ I joined SSLG to serve my community, but in the process, my community helped bui
 </div>
 </section>
 
+  <script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{threshold:.2});
+
+document.querySelectorAll(
+".fade-up,.zoom,.slide-left"
+).forEach(el=>{
+
+observer.observe(el);
+
+});
+
+</script>
+  
 </body>
 </html>
