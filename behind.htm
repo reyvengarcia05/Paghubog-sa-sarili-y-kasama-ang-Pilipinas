@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The People Behind My Story</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#081225,#0f172a);
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:2;
+color:#d1d5db;
+}
+
+/* SECTIONS */
+
+.section{
+padding:100px 8%;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.chapter-number{
+color:#60a5fa;
+font-size:.9rem;
+font-weight:600;
+letter-spacing:3px;
+margin-bottom:10px;
+text-transform:uppercase;
+}
+
+.card h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.card p{
+font-size:1.1rem;
+line-height:2;
+color:#d1d5db;
+}
+
+.quote{
+margin-top:30px;
+font-style:italic;
+font-size:1.2rem;
+color:#93c5fd;
+}
+
+/* IMAGE PLACEHOLDER */
+
+.gallery{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.photo{
+height:220px;
+border:2px dashed rgba(255,255,255,.3);
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:#94a3b8;
+}
+
+/* FINAL PAGE */
+
+.final-page{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.final-box{
+max-width:900px;
+}
+
+.final-box h1{
+font-size:3.5rem;
+margin-bottom:30px;
+}
+
+.final-box p{
+font-size:1.2rem;
+line-height:2.2;
+color:#d1d5db;
+}
+
+/* BUTTON */
+
+.back-btn{
+position:fixed;
+top:20px;
+left:20px;
+padding:12px 22px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-weight:600;
+cursor:pointer;
+z-index:999;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(80px) scale(.95);
+transition:
+opacity 1.2s ease,
+transform 1.2s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+.hero-content{
+opacity:0;
+animation:introFade 2s ease forwards;
+}
+
+@keyframes introFade{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:40px;
+max-width:1100px;
+margin:auto;
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+/* Floating stars */
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+opacity:.6;
+animation:floatStar linear infinite;
+}
+
+@keyframes floatStar{
+from{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:.8;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+<div class="stars">
+
+<div class="star" style="left:5%;animation-duration:15s;"></div>
+<div class="star" style="left:15%;animation-duration:18s;"></div>
+<div class="star" style="left:25%;animation-duration:20s;"></div>
+<div class="star" style="left:35%;animation-duration:14s;"></div>
+<div class="star" style="left:45%;animation-duration:17s;"></div>
+<div class="star" style="left:55%;animation-duration:21s;"></div>
+<div class="star" style="left:65%;animation-duration:16s;"></div>
+<div class="star" style="left:75%;animation-duration:19s;"></div>
+<div class="star" style="left:85%;animation-duration:22s;"></div>
+<div class="star" style="left:95%;animation-duration:15s;"></div>
+
+</div>
+
+  
+<button class="back-btn" onclick="history.back()">
+← Back
+</button>
+
+<!-- INTRODUCTION -->
+
+<section class="hero">
+
+<div class="hero-content fade-up">
+
+<h1>📖 The People Behind My Story</h1>
+
+<p>
+
+Every chapter of my journey was shaped by people who became part of my life.
+
+This hidden book is dedicated to those who walked beside me, believed in me, supported me, and helped me become who I am today.
+
+While the main story tells my journey, these pages are about the people who made that journey meaningful.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CHAPTER 1 -->
+
+<section class="section">
+
+<div class="card fade-up">
+
+<div class="chapter-number">
+Chapter 1
+</div>
+
+<h2>Friends</h2>
+
+<p>
+
+<!-- ILAGAY MO DITO ANG STORY MO ABOUT FRIENDS -->
+
+PASTE YOUR STORY HERE
+
+</p>
+
+<div class="quote">
+"Friendship made every challenge easier and every success more meaningful."
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+Friend Photo 1
+</div>
+
+<div class="photo">
+Friend Photo 2
+</div>
+
+<div class="photo">
+Friend Photo 3
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHAPTER 2 -->
+
+<section class="section">
+
+<div class="card fade-up">
+
+<div class="chapter-number">
+Chapter 2
+</div>
+
+<h2>Classmates</h2>
+
+<p>
+
+<!-- ILAGAY MO DITO ANG STORY MO ABOUT CLASSMATES -->
+
+PASTE YOUR STORY HERE
+
+</p>
+
+<div class="quote">
+"Some classmates became friends, and some memories became lifelong treasures."
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+Class Photo 1
+</div>
+
+<div class="photo">
+Class Photo 2
+</div>
+
+<div class="photo">
+Class Photo 3
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHAPTER 3 -->
+
+<section class="section">
+
+<div class="card fade-up">
+
+<div class="chapter-number">
+Chapter 3
+</div>
+
+<h2>Teachers</h2>
+
+<p>
+
+<!-- ILAGAY MO DITO ANG STORY MO ABOUT TEACHERS -->
+
+PASTE YOUR STORY HERE
+
+</p>
+
+<div class="quote">
+"The lessons they taught extended far beyond the classroom."
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+Teacher Photo 1
+</div>
+
+<div class="photo">
+Teacher Photo 2
+</div>
+
+<div class="photo">
+Teacher Photo 3
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL PAGE -->
+
+<section class="final-page">
+
+<div class="final-box fade-up">
+
+<h1>A Letter of Gratitude</h1>
+
+<p>
+
+This website tells my story.
+
+But these pages remind me that I never walked this journey alone.
+
+To my friends, classmates, teachers, and everyone who became part of my journey—
+
+Thank you for helping me grow,
+for believing in me,
+and for helping me turn
+
+<strong>Silence into Significance.</strong>
+
+<br><br>
+
+— Reyven Bermudo
+
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll(".fade-up").forEach((el,index)=>{
+
+el.style.transitionDelay = `${index * 0.15}s`;
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
