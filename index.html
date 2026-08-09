@@ -147,7 +147,6 @@ border-radius:25px;
 text-align:center;
 animation:fadeIn .5s ease;
 }
-  position:relative;
 
 .secret-box input{
 width:100%;
@@ -184,43 +183,6 @@ to{
 opacity:1;
 transform:scale(1);
 }
-}
-
-  .secret-box{
-position:relative;
-}
-
-.close-btn{
-position:absolute;
-top:15px;
-right:15px;
-
-width:40px;
-height:40px;
-
-border:none;
-border-radius:50%;
-
-background:rgba(255,255,255,.1);
-color:white;
-
-font-size:32px;
-line-height:1;
-
-cursor:pointer;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-z-index:1000;
-}
-
-.close-btn:hover{
-background:#ef4444;
-}
-  .secret-box{
-position:relative;
 }
   
 </style>
@@ -523,28 +485,14 @@ button.innerHTML='📂 Read Full Story';
 });
 
 });
-    
-document.getElementById("closeModal")
-.addEventListener("click",()=>{
 
-document.getElementById("secretModal").style.display="none";
-
-});
-
-    
 </script>
-
 
   <div id="secretModal" class="secret-modal">
 
-<div class="secret-box">
+  <div class="secret-box">
 
-<button id="closeModal" class="close-btn">×</button>
-
-<h1>🔒 Hidden Chapter Found</h1>
-
-...
-</div>
+    <h2>🔒 Hidden Chapter Found</h2>
 
     <p>
       You discovered a hidden part of the story.
@@ -607,14 +555,6 @@ document.getElementById("errorMsg")
 }
 
 });
-document.getElementById("closeModal")
-.addEventListener("click", () => {
-
-document.getElementById("secretModal")
-.style.display = "none";
-
-});
-  
 </script>
   
 </body>
