@@ -184,6 +184,16 @@ opacity:1;
 transform:scale(1);
 }
 }
+
+.secret-box{
+position:relative;
+transition:all .35s ease;
+}
+
+.secret-box.closing{
+opacity:0;
+transform:translateY(-20px) scale(.95);
+}
   
 </style>
 </head>
@@ -535,6 +545,15 @@ if(clicks >= 5){
 
 modal.style.display = "flex";
 
+const box = document.querySelector(".secret-box");
+
+box.style.opacity = "0";
+box.style.transform = "translateY(20px) scale(.95)";
+
+setTimeout(()=>{
+box.style.opacity = "1";
+box.style.transform = "translateY(0) scale(1)";
+},50);
 clicks = 0;
 
 }
@@ -547,8 +566,17 @@ document.getElementById("unlockBtn")
 document.querySelector(".close-secret")
 .addEventListener("click",()=>{
 
-  document.getElementById("secretModal")
-  .style.display = "none";
+const box = document.querySelector(".secret-box");
+
+box.classList.add("closing");
+
+setTimeout(()=>{
+
+modal.style.display = "none";
+
+box.classList.remove("closing");
+
+},350);
 
 });
 
