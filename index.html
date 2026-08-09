@@ -492,6 +492,8 @@ button.innerHTML='📂 Read Full Story';
 
   <div class="secret-box">
 
+    <button class="close-secret">&times;</button>
+
     <h2>🔒 Hidden Chapter Found</h2>
 
     <p>
@@ -538,6 +540,14 @@ clicks = 0;
 
 document.getElementById("unlockBtn")
 .addEventListener("click",()=>{
+
+document.querySelector(".close-secret")
+.addEventListener("click",()=>{
+
+  document.getElementById("secretModal")
+  .style.display = "none";
+
+});
 
 const code =
 document.getElementById("secretCode").value;
