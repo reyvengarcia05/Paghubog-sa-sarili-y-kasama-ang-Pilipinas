@@ -147,6 +147,7 @@ border-radius:25px;
 text-align:center;
 animation:fadeIn .5s ease;
 }
+  position:relative;
 
 .secret-box input{
 width:100%;
@@ -193,16 +194,23 @@ position:relative;
 position:absolute;
 top:15px;
 right:15px;
-background:none;
+width:35px;
+height:35px;
 border:none;
+border-radius:50%;
+background:rgba(255,255,255,.1);
 color:white;
 font-size:24px;
 cursor:pointer;
-opacity:.7;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.3s;
+z-index:1000;
 }
 
 .close-btn:hover{
-opacity:1;
+background:#ef4444;
 transform:scale(1.1);
 }
   
@@ -587,6 +595,14 @@ document.getElementById("errorMsg")
 }
 
 });
+document.getElementById("closeModal")
+.addEventListener("click", () => {
+
+document.getElementById("secretModal")
+.style.display = "none";
+
+});
+  
 </script>
   
 </body>
