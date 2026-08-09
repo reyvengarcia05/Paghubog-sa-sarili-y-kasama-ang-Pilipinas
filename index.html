@@ -184,6 +184,27 @@ opacity:1;
 transform:scale(1);
 }
 }
+
+  .secret-box{
+position:relative;
+}
+
+.close-btn{
+position:absolute;
+top:15px;
+right:15px;
+background:none;
+border:none;
+color:white;
+font-size:24px;
+cursor:pointer;
+opacity:.7;
+}
+
+.close-btn:hover{
+opacity:1;
+transform:scale(1.1);
+}
   
 </style>
 </head>
@@ -485,14 +506,25 @@ button.innerHTML='📂 Read Full Story';
 });
 
 });
+    
+document.getElementById("closeModal")
+.addEventListener("click",()=>{
 
+document.getElementById("secretModal").style.display="none";
+
+});
+
+    
 </script>
+
 
   <div id="secretModal" class="secret-modal">
 
-  <div class="secret-box">
+<div class="secret-box">
 
-    <h2>🔒 Hidden Chapter Found</h2>
+  <button id="closeModal" class="close-btn">✕</button>
+
+  <h2>🔒 Hidden Chapter Found</h2>
 
     <p>
       You discovered a hidden part of the story.
