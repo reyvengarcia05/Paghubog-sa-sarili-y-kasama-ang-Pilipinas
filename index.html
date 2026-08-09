@@ -125,65 +125,11 @@ max-width:800px;
 margin:20px auto;
 color:#ddd;
 }
-
-.search-container{
-display:block !important;
-position:fixed !important;
-top:20px !important;
-left:20px !important;
-z-index:999999 !important;
-background:red !important;
-padding:20px !important;
-border:3px solid yellow !important;
-}
-
-.search-container input{
-padding:12px 15px;
-border:none;
-border-radius:12px;
-background:rgba(255,255,255,.1);
-backdrop-filter:blur(10px);
-color:white;
-width:220px;
-outline:none;
-}
-
-.search-container input::placeholder{
-color:#ccc;
-}
-
-.search-container button{
-padding:12px 16px;
-border:none;
-border-radius:12px;
-cursor:pointer;
-background:#2563eb;
-color:white;
-font-size:16px;
-}
   
 </style>
 </head>
 <body>
 
-  <body>
-
-<div class="search-container">
-
-<input id="searchInput" type="text" placeholder="Search chapters...">
-
-<button onclick="searchChapter()">
-🔍
-</button>
-
-</div>
-<div class="search-container">
-    <input id="searchInput" type="text" placeholder="Search chapters...">
-    <button onclick="searchChapter()">🔍</button>
-</div>
-
-<section class="hero">
-  
 <section class="hero">
 <div>
 <h1>FROM SILENCE TO SIGNIFICANCE</h1>
@@ -198,7 +144,7 @@ font-size:16px;
 </div>
 </section>
 
-<section class="section" id="chapter1">
+<section class="section" id="c1">
 <div class="card fade-up">
 <div><img src="honor.jpg" alt=""></div>
 <div>
@@ -247,8 +193,8 @@ From that moment on, a question kept coming to my mind:
 </div>
 </section>
 
-<section class="section" id="chapter2">
-  <div class="card fade-up">
+<section class="section">
+<div class="card fade-up">
 <div><img src="sslg-logo.png" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 02</div>
@@ -279,8 +225,8 @@ As time passed, I realized that leadership was not only about responsibilities a
 </div>
 </section>
 
-<section class="section" id="chapter3">
-  <div class="card fade-up">
+<section class="section">
+<div class="card fade-up">
 <div><img src="sslg-family.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 03</div>
@@ -310,8 +256,8 @@ As I explored different responsibilities, I found myself drawn to the world of e
 </div>
 </section>
 
-<section class="section" id="chapter4">
-  <div class="card fade-up">
+<section class="section">
+<div class="card fade-up">
 <div><img src="activity.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 04</div>
@@ -343,8 +289,8 @@ As I continue my journey, I will always carry the values, experiences, and memor
 </div>
 </section>
 
-<section class="section" id="chapter5">
-  <div class="card fade-up">
+<section class="section">
+<div class="card fade-up">
 <div><img src="service1.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 05</div>
@@ -376,8 +322,8 @@ Through service, I discovered that the greatest reward of leadership is not reco
 </div>
 </section>
 
-<section class="section" id="chapter6">
-  <div class="card fade-up">
+<section class="section">
+<div class="card fade-up">
 <div><img src="recognition.jpg" alt=""></div>
 <div>
 <div class="evidence">CHAPTER 06</div>
@@ -477,65 +423,6 @@ button.innerHTML='📂 Read Full Story';
 });
 
 });
-
-</script>
-
-  <script>
-
-function searchChapter(){
-
-const value = document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
-
-if(value === "behind"){
-
-window.location.href = "behind.html";
-return;
-
-}
-
-if(value === "chapter 1"){
-document.getElementById("chapter1").scrollIntoView({behavior:"smooth"});
-}
-
-if(value === "chapter 2"){
-document.getElementById("chapter2").scrollIntoView({behavior:"smooth"});
-}
-
-if(value === "chapter 3"){
-document.getElementById("chapter3").scrollIntoView({behavior:"smooth"});
-}
-
-if(value === "chapter 4"){
-document.getElementById("chapter4").scrollIntoView({behavior:"smooth"});
-}
-
-if(value === "chapter 5"){
-document.getElementById("chapter5").scrollIntoView({behavior:"smooth"});
-}
-
-if(value === "chapter 6"){
-document.getElementById("chapter6").scrollIntoView({behavior:"smooth"});
-}
-
-}
-
-</script>
-
-<script>
-
-function searchChapter(){
-
-const value = document.getElementById("searchInput").value.toLowerCase().trim();
-
-if(value === "behind"){
-window.location.href = "behind.html";
-}
-
-}
 
 </script>
   
