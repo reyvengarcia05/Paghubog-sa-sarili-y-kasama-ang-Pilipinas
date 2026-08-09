@@ -194,24 +194,33 @@ position:relative;
 position:absolute;
 top:15px;
 right:15px;
-width:35px;
-height:35px;
+
+width:40px;
+height:40px;
+
 border:none;
 border-radius:50%;
+
 background:rgba(255,255,255,.1);
 color:white;
-font-size:24px;
+
+font-size:32px;
+line-height:1;
+
 cursor:pointer;
+
 display:flex;
 align-items:center;
 justify-content:center;
-transition:.3s;
+
 z-index:1000;
 }
 
 .close-btn:hover{
 background:#ef4444;
-transform:scale(1.1);
+}
+  .secret-box{
+position:relative;
 }
   
 </style>
@@ -530,9 +539,12 @@ document.getElementById("secretModal").style.display="none";
 
 <div class="secret-box">
 
-  <button id="closeModal" class="close-btn">✕</button>
+<button id="closeModal" class="close-btn">×</button>
 
-  <h2>🔒 Hidden Chapter Found</h2>
+<h1>🔒 Hidden Chapter Found</h1>
+
+...
+</div>
 
     <p>
       You discovered a hidden part of the story.
