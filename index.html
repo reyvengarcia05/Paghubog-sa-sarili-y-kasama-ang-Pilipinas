@@ -366,7 +366,7 @@ I joined SSLG to serve my community, but in the process, my community helped bui
 </p>
 <div style="margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:25px;">
     
-    <h3 id="secretTrigger"
+   <h3 id="secretTrigger"
 style="margin-bottom:25px;cursor:pointer;">
 Reyven Bermudo
 </h3>
@@ -427,6 +427,36 @@ button.innerHTML='📂 Read Full Story';
 
 });
 
+</script>
+
+<script>
+let clicks = 0;
+
+document.getElementById("secretTrigger").addEventListener("click", () => {
+
+    clicks++;
+
+    if (clicks === 5) {
+
+        const code = prompt(
+            "🔒 Hidden Chapter Found\n\nEnter Access Code:"
+        );
+
+        if (code === "CtrlS") {
+
+            window.location.href = "behind.html";
+
+        } else {
+
+            alert("❌ Incorrect Access Code");
+
+        }
+
+        clicks = 0;
+
+    }
+
+});
 </script>
   
 </body>
