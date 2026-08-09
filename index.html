@@ -127,15 +127,14 @@ color:#ddd;
 }
 
 .search-container{
-position:fixed;
-top:20px;
-right:20px;
-display:flex;
-gap:10px;
-z-index:999999;
-background:red;
-padding:10px;
-border:3px solid yellow;
+display:block !important;
+position:fixed !important;
+top:20px !important;
+left:20px !important;
+z-index:999999 !important;
+background:red !important;
+padding:20px !important;
+border:3px solid yellow !important;
 }
 
 .search-container input{
@@ -178,7 +177,12 @@ font-size:16px;
 </button>
 
 </div>
+<div class="search-container">
+    <input id="searchInput" type="text" placeholder="Search chapters...">
+    <button onclick="searchChapter()">🔍</button>
+</div>
 
+<section class="hero">
   
 <section class="hero">
 <div>
