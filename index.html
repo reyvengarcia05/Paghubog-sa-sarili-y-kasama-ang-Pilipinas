@@ -125,11 +125,58 @@ max-width:800px;
 margin:20px auto;
 color:#ddd;
 }
+
+.search-container{
+position:fixed;
+top:20px;
+right:20px;
+display:flex;
+gap:10px;
+z-index:9999;
+}
+
+.search-container input{
+padding:12px 15px;
+border:none;
+border-radius:12px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+color:white;
+width:220px;
+outline:none;
+}
+
+.search-container input::placeholder{
+color:#ccc;
+}
+
+.search-container button{
+padding:12px 16px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:#2563eb;
+color:white;
+font-size:16px;
+}
   
 </style>
 </head>
 <body>
 
+  <body>
+
+<div class="search-container">
+
+<input id="searchInput" type="text" placeholder="Search chapters...">
+
+<button onclick="searchChapter()">
+🔍
+</button>
+
+</div>
+
+  
 <section class="hero">
 <div>
 <h1>FROM SILENCE TO SIGNIFICANCE</h1>
