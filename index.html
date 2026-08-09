@@ -126,7 +126,7 @@ margin:20px auto;
 color:#ddd;
 }
 
-.secret-modal{
+  .secret-modal{
 position:fixed;
 inset:0;
 background:rgba(0,0,0,.85);
@@ -135,7 +135,6 @@ display:none;
 justify-content:center;
 align-items:center;
 z-index:9999;
-transition:opacity .3s ease;
 }
 
 .secret-box{
@@ -184,27 +183,6 @@ to{
 opacity:1;
 transform:scale(1);
 }
-}
-
-  .secret-box{
-position:relative;
-}
-
-.close-secret{
-position:absolute;
-top:-15px;
-right:-15px;
-width:45px;
-height:45px;
-border-radius:50%;
-background:#b30000;
-color:white;
-border:none;
-font-size:28px;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
 }
   
 </style>
@@ -508,36 +486,11 @@ button.innerHTML='📂 Read Full Story';
 
 });
 
-   document.querySelector(".close-secret")
-.addEventListener("click",()=>{
-
-  modal.style.opacity = "0";
-
-  setTimeout(()=>{
-    modal.style.display = "none";
-    modal.style.opacity = "1";
-  },300);
-
-});
-
-modal.addEventListener("click",(e)=>{
-  if(e.target === modal){
-    modal.style.display = "none";
-  }
-});
-
 </script>
 
   <div id="secretModal" class="secret-modal">
 
-<div class="secret-box">
-
-<button class="close-secret" onclick="closeSecret()">
-✕
-</button>
-
-<h2>🔒 Hidden Chapter Found</h2>
-
+  <div class="secret-box">
 
     <h2>🔒 Hidden Chapter Found</h2>
 
