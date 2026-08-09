@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -43,30 +42,90 @@ transform:translateY(80px);
 transition:all 1.2s cubic-bezier(.17,.67,.31,1);
 }
 
-.fade-up.show{opacity:1;transform(0);}
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
 
-.zoom{opacity:0;transform(.8);transition:1s;}
+  .zoom{
+opacity:0;
+transform:scale(.8);
+transition:1s;
+}
 
-.zoom{opacity:0;transform(.85);transition 1.2s cubic-bezier(.17,.67,.31,1);}
+.zoom{
+opacity:0;
+transform:scale(.85);
+transition:all 1.2s cubic-bezier(.17,.67,.31,1);
+}
 
-.slide-left{opacity:0;transform(-120px);transition 1.2s cubic-bezier(.17,.67,.31,1);}
+.slide-left{
+opacity:0;
+transform:translateX(-120px);
+transition:all 1.2s cubic-bezier(.17,.67,.31,1);
+}
 
-.slide-left.show{opacity:1;transform(0);}
+.slide-left.show{
+opacity:1;
+transform:translateX(0);
+}
 
-.drawer-btn{margin-top:20px;width:100%;padding:15px;background:#b30000;color;border;border-radius:12px;font-size:16px;font-weight:600;cursor;transition:.3s;}
+  .drawer-btn{
+margin-top:20px;
+width:100%;
+padding:15px;
+background:#b30000;
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
 
-.drawer-btn{background:#d10000;transform(-2px);}
+.drawer-btn:hover{
+background:#d10000;
+transform:translateY(-2px);
+}
 
-.drawer-content{max-height:0;overflow;transition .8s ease;background(255,255,255,.04);border-radius:12px;margin-top:10px;}
+.drawer-content{
+max-height:0;
+overflow:hidden;
+transition:max-height .8s ease;
+background:rgba(255,255,255,.04);
+border-radius:12px;
+margin-top:10px;
+}
 
-.drawer-content p{padding:20px;line-height:1.9;color:#ddd;}
+.drawer-content p{
+padding:20px;
+line-height:1.9;
+color:#ddd;
+}
 
-.drawer-content.active{max-height:3000px;}.zoom.show{opacity:1;transform(1);}
+.drawer-content.active{
+max-height:3000px;
+}
+.zoom.show{
+opacity:1;
+transform:scale(1);
+}
 
-.hero h1{font-size(2.5rem,6vw,5rem);letter-spacing:4px;text-shadow:0 0 20px rgba(255,255,255,.1),0 0 40px rgba(179,0,0,.3);}
+.hero h1{
+font-size:clamp(2.5rem,6vw,5rem);
+letter-spacing:4px;
+text-shadow:
+0 0 20px rgba(255,255,255,.1),
+0 0 40px rgba(179,0,0,.3);
+}
 
-.hero p{max-width:800px;margin:20px auto;color:#ddd;}
-
+.hero p{
+max-width:800px;
+margin:20px auto;
+color:#ddd;
+}
+  
 </style>
 </head>
 <body>
@@ -74,13 +133,12 @@ transition:all 1.2s cubic-bezier(.17,.67,.31,1);
 <section class="hero">
 <div>
 <h1>FROM SILENCE TO SIGNIFICANCE</h1>
-
+  
 <p>How My Community Shaped My Identity</p>
-
+  
 <p><strong>Reyven Bermudo</strong></p>
-
+  
 <a href="#c1" class="btn">Begin the Story</a>
-
 </div>
 </div>
 </div>
@@ -180,14 +238,14 @@ As time passed, I realized that leadership was not only about responsibilities a
 <li>Discovered my voice</li>
 </ul>
 <p class="quote">"The community gave me a place where my voice mattered."</p>
-
+  
 <button class="drawer-btn">
 📂 Read Full Story
 </button>
 
 <div class="drawer-content">
 <p>
-
+  
 By the time I reached Grades 9 and 10, my confidence had grown significantly. I was no longer afraid to participate in class, and I actively practiced my public speaking skills whenever I had the opportunity. It felt as if my personality had completely changed. The community I became part of—the SSLG—helped me become a more confident and capable version of myself.
 
 This chapter of my life is one of the things I am most grateful for. Through SSLG, I discovered strengths that I never knew I had. However, there came a time when I began to ask myself, “What if I aimed for a higher position in SSLG?” I knew it would be difficult, but I wanted to challenge myself and find out where my true strengths lay.
@@ -259,7 +317,7 @@ Being involved in these activities taught me the importance of empathy, responsi
 Through service, I discovered that the greatest reward of leadership is not recognition—it is knowing that you have helped someone and contributed to your community.
 
 "Leadership is not about titles. It is about service."
-
+  
 </p>
 </div>
 </section>
@@ -284,7 +342,7 @@ Through service, I discovered that the greatest reward of leadership is not reco
 <div class="drawer-content">
 <p>
 
-As I look back on my journey, I realize how much I have grown since the shy and uncertain student I once was. The SSLG community helped me build confidence, develop my voice, and believe in my abilities.
+  As I look back on my journey, I realize how much I have grown since the shy and uncertain student I once was. The SSLG community helped me build confidence, develop my voice, and believe in my abilities.
 
 Through countless experiences, I improved my communication skills and became more comfortable speaking in front of different audiences. I learned how to express my ideas clearly, work with others effectively, and take responsibility for my actions. Along the way, I also developed discipline, time management, and perseverance—qualities that continue to guide me in both academics and leadership.
 
@@ -307,16 +365,16 @@ From Silence to Significance—this is the story of how my community shaped who 
 I joined SSLG to serve my community, but in the process, my community helped build my identity, strengthen my confidence, and inspire me to become a better version of myself.
 </p>
 <div style="margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:25px;">
+    
+    <h3 style="margin-bottom:25px;">Reyven Bermudo</h3>
 
-<h3 style="margin-bottom:25px;">Reyven Bermudo</h3>
+    <p style="color:#999;letter-spacing:2px;text-transform:uppercase;font-size:13px;">
+        Submitted To
+    </p>
 
-<p style="color:#999;letter-spacing:2px;text-transform:uppercase;font-size:13px;">
-    Submitted To
-</p>
-
-<h4 style="margin-top:10px;color:#fff;">
-   Sir Glen John Y. Wong
-</h4>
+    <h4 style="margin-top:10px;color:#fff;">
+       Sir Glen John Y. Wong
+    </h4>
 
 </div>
 </div>
@@ -346,7 +404,6 @@ observer.observe(el);
 });
 
 </script>
-
   <script>
 
 document.querySelectorAll('.drawer-btn').forEach(button=>{
@@ -368,6 +425,6 @@ button.innerHTML='📂 Read Full Story';
 });
 
 </script>
-
+  
 </body>
 </html>
